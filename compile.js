@@ -6,10 +6,10 @@ const solc = require('solc')
 
 
 // Getting the path to our Contract[s]
-const ethInboxPath = path.resolve(__dirname,'contracts','Board.sol')
+const ethBoardPath = path.resolve(__dirname,'contracts','Board.sol')
 // Reading our file line by line
-const sourceCode = fs.readFileSync(ethInboxPath, 'utf-8')
+const sourceCode = fs.readFileSync(ethBoardPath, 'utf-8')
 
 // solc requires the source code we are reading in, as well as the number of contracts we are trying to compile
 // If you want to get a better idea of what the compiler is doing just wrap the below statement in a 'console.log()'
-module.exports = solc.compile(sourceCode,1).contracts[":EthInbox"]
+module.exports = solc.compile(sourceCode,1).contracts[":Board"]
